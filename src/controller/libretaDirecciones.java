@@ -13,6 +13,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.Persona;
+import view.VistaPersonaController;
 
 /**
  *
@@ -86,6 +87,10 @@ public class libretaDirecciones extends Application {
 
         //Añado la vista al centro del layoutPrincipal
         layoutPrincipal.setCenter(vistaPersona);
+        
+        //Doy acceso al controlador VistaPersonaCOntroller a LibretaDirecciones
+        VistaPersonaController controller = loader.getController();
+        controller.setLibretaDirecciones(this);
     }
 
     //Invoco el método getPrimaryStage para que devuelva mi escenario principal
